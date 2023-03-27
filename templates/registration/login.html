@@ -1,5 +1,7 @@
 {% extends '_base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block page_title %}
 Login Page
 {% endblock page_title %}
@@ -7,7 +9,9 @@ Login Page
 {% block content %}
     <form action="" method="post">
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Log In">
+        {{ form|crispy }}
+        <input class="btn btn-outline-success mx-1" type="submit" value="Log In">
+        <br>
+        <a class="btn btn-outline-warning mx-1 mt-3" href="{% url 'signup' %}">Don't have an account? Sign Up here</a>
     </form>
 {% endblock content %}

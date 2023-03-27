@@ -10,6 +10,8 @@ Sign Up Page
     <form action="" method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <input class="btn btn-outline-success" type="submit" value="Sign Up">
+        <input class="btn btn-outline-success mx-1" type="submit" value="Sign Up">
+        <br>
+        <a class="btn btn-outline-secondary mx-1 mt-3" href="{% url 'login' %}">go to login page</a>
     </form>
 {% endblock content %}

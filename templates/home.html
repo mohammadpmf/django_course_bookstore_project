@@ -9,8 +9,8 @@ Home Page
         Home Page
     </h1>
     {% if user.is_authenticated %}
-        <p>Welcome {{ user.username }} | <a href="{% url 'logout' %}">Log Out</a></p>
+        <p>Welcome {{ user.username }} | <a class="btn btn-danger" href="{% url 'logout' %}">Log Out</a></p>
     {% else %}
-        <a href="{% url 'login' %}">Log In</a> | <a href="{% url 'signup' %}">Sign Up</a>
+        <a class="btn btn-success" href="{% url 'login' %}">Log In</a> <a class="btn btn-info mx-3" href="{% url 'signup' %}">Sign Up</a>
     {% endif %}
 {% endblock content %}
