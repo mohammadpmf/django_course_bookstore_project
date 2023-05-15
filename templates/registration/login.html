@@ -10,8 +10,10 @@ Login Page
     <form action="" method="post">
         {% csrf_token %}
         {{ form|crispy }}
-        <input class="btn btn-outline-success mx-1" type="submit" value="Log In">
-        <br>
-        <a class="btn btn-outline-warning mx-1 mt-3" href="{% url 'signup' %}">Don't have an account? Sign Up here</a>
+        <div class='mt-4'>
+            <input class="btn btn-outline-success mx-1" type="submit" value="Log In">
+            <a class="text-decoration-none btn btn-outline-info mx-1" href="{% url 'password_reset' %}">Forgot Password?</a>
+            <a class="btn btn-outline-warning mx-1" href="{% url 'signup' %}">Don't have an account? Sign Up here</a>
+        </div>
     </form>
 {% endblock content %}

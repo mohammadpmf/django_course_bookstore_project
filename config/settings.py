@@ -139,3 +139,15 @@ LOGOUT_REDIRECT_URL = 'home'
 # crispy forms settings
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+
+############# Sendig Email
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = "smtp.gmail.com"
+# EMAIL_PORT = 465 # For SSL
+# EMAIL_USE_SSL = True
+# EMAIL_HOST_USER = 'mailto:madval1369@gmail.com'
+# EMAIL_HOST_PASSWORD = "wfrekoinpeygyuxq"
